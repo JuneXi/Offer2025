@@ -1,4 +1,4 @@
-# 🌳 二叉树类型⑥：视图与层级类 (Binary Tree View & Level Problems)
+ # 🌳 二叉树类型⑥：视图与层级类 (Binary Tree View & Level Problems)
 
 > **格式 / Format：** 中英文对照 | CN-EN side-by-side
 

@@ -64,7 +64,7 @@ public boolean isSameTree(TreeNode p, TreeNode q) {
 ```java
 public boolean isSubtree(TreeNode root, TreeNode subRoot) {
     if (root == null) return false;
-    if (isSameTree(root, subRoot)) return true;
+    if (isSameTree(root, subRoot)) return true; // here is a diff cunction
     return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 }
 ```
