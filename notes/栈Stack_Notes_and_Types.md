@@ -99,6 +99,52 @@ for (每个字符 c) {
 - 150. Evaluate Reverse Polish Notation（后缀表达式）
 - 224/227/772. Basic Calculator 系列（带括号优先级）
 
+用单栈的做法
+
+```aidl
+class Solution {
+    public int calculate(String s) {
+		if(s == null || s.length() == 0){
+			return 0;
+		}
+		//sign
+		int sign = 1;
+		int res = 0;
+		Stack<Integer> stack = new Stack<Integer>();
+		for(int i = 0; i < s.length(); i++){
+			//note: how to write below?
+			if(Character.isDigit(s.charAt(i))){
+				//note: here - '0'
+				int val = s.charAt(i) - '0';
+				while(i + 1 < s.length() && Character.isDigit(s.charAt(i + 1))){
+					//note: here - '0'
+					val = val * 10 + (s.charAt(i + 1) - '0');
+					i++;
+				}
+				res = res + val * sign;
+			}else if(s.charAt(i) == ' '){
+				continue;
+			}else if(s.charAt(i) == '+'){
+				sign = 1;
+			}else if(s.charAt(i) == '-'){
+				sign = -1;
+			}else if(s.charAt(i) == '('){
+				stack.push(res);
+				stack.push(sign);
+				//reset
+				res = 0;
+				sign = 1;
+			}else if(s.charAt(i) == ')'){
+				res = res * stack.pop() + stack.pop();
+			}else;
+		}
+        return res;
+    }
+    
+}
+```
+时间复杂度： O(n)
+每个字符最多入栈一次出战一次
 ---
 
 ## 六、栈与 DFS 的关系

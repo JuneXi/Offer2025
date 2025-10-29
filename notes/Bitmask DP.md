@@ -89,6 +89,12 @@ Use an integer `mask` to represent which elements are used. The current bucket s
 | 判断是否选中 | `(mask & bit) != 0` | Check if chosen |
 | 选中元素 | `mask | bit` | Mark as used |
 
+1. mask |= (1 << i); // 设置第 i 位为 1：
+2. mask &= ~(1 << i);   // 取消第i位 → 设置为0
+3. boolean on = ((mask >> i) & 1) == 1; // 判断是否为1
+
+
+
 ### Java 代码 | Java Code
 ```java
 class Solution {
