@@ -5,44 +5,80 @@
 
 ### 📅 Day 7 — 2025年11月6日（周四）  
 **主题：Binary Search / Sliding Window / Stack & Queue**  
-| ✅ | 类型 | 题目 | 编号 | 备注 | 完成日期 / 复盘总结 |
-|----|------|------|------|------|------------------|
-| ☐ | Binary Search | Search in Rotated Sorted Array | #33 | | |
-| ☐ | Binary Search | Find Minimum in Rotated Sorted Array | #153 | | |
-| ☐ | Sliding Window | Longest Substring Without Repeating Characters | #3 | | |
-| ☐ | Sliding Window | Minimum Window Substring | #76 | | |
-| ☐ | Stack | Daily Temperatures | #739 | | |
-| ☐ | Queue | Implement Stack using Queues | #225 | | |
+
+ | 类型 | 题目 | 编号 | 备注 | 完成日期 / 复盘总结 |
+|------|------|------|------|------------------|
+ | Binary Search | Search in Rotated Sorted Array | #33 | | |
+| Binary Search | Find Minimum in Rotated Sorted Array | #153 | | |
+| Sliding Window | Longest Substring Without Repeating Characters | #3 | | use Hashmap|
+ | Sliding Window | Minimum Window Substring | #76 | | 注意何时diff改变，如何处理重复字符 |
+ | Stack | Daily Temperatures | #739 | | 用ArrayDeque，以及注意条件是小于等于 |
+| Queue | Implement Stack using Queues | #225 | | 交换q1和q2时不可传参数，否则只会交换参数 |
 **任务：** 手写 + 讲解，梳理边界与 off-by-one 错误模式。
+
+### 📅 Day 7 — 11 月 6 日 （周四）
+**主题：表达重启 + 思维结构训练**
+
+- 复盘题目：Search in Rotated Sorted Array (#33)、Number of Islands (#200)
+- 练习 “思维断片重启句”：
+  > “Let me restate what I have so far.”  
+  > “I’ll verify the edge cases first.”
+- 目标：逻辑清晰，语速平稳。
 
 ---
 
 ### 📅 Day 6 — 2025年11月7日（周五）  
 **主题：树与图（上）**  
+
 | ✅ | 类型 | 题目 | 编号 | 备注 | 完成日期 / 复盘总结 |
 |----|------|------|------|------|------------------|
-| ☐ | Tree DFS | Binary Tree Maximum Path Sum | #124 | | |
+| ☐ | Tree DFS | Binary Tree Maximum Path Sum | #124 | |注意负数 |
 | ☐ | Tree BFS | Binary Tree Level Order Traversal | #102 | | |
-| ☐ | Graph BFS | Number of Islands | #200 | | |
+| ☐ | Graph BFS | Number of Islands | #200 | |DFS：代码短，递归实现简单；但可能因栈深导致大图时栈溢出。适合矩阵较小或语言栈深够的情况。BFS：显式队列，避免递归栈问题；空间略大，但稳定。适合大矩阵或系统递归栈限制严格的情况（如 Java）。 |
 | ☐ | Graph Topo Sort | Course Schedule | #207 | | |
 **任务：** 对比 DFS 与 BFS，画出路径图解，记录复杂度。
+
+**主题：行为面试 （STAR）**
+
+- 准备并录音 6 个 STAR 故事：
+ 1. Conflict Resolution
+ 2. Debugging a Production Issue
+ 3. Cross-team Collaboration
+ 4. Learning a New Technology
+ 5. Leading without Authority
+ 6. Improving Efficiency
+- 删除 filler words （like, um, so），语气自然。
 
 ---
 
 ### 📅 Day 5 — 2025年11月8日（周六） — 强化日 A  
 **主题：树与图（下） + 动态规划（上） + 行为题 STAR（前半）**  
+
 | ✅ | 模块 | 内容 | 备注 | 完成日期 / 复盘总结 |
 |----|------|------|------|------------------|
-| ☐ | 图题 | Network Delay Time (#743), Redundant Connection (#684) | | |
+| ☐ | 图题 | Network Delay Time (#743), Redundant Connection (#684) | |pq可能会存入同一个节点的多份记录 |
 | ☐ | DP 背包类 | Coin Change (#322), Unique Paths II (#63) | | |
-| ☐ | DP 子序列类 | Longest Increasing Subsequence (#300) | | |
+| ☐ | DP 子序列类 | Longest Increasing Subsequence (#300) | |二分解法 |
 | ☐ | STAR 故事 | Conflict Resolution / Debugging Issue / Scaling for Traffic Spike | 录音练习 | |
 **任务：** 每题写出思路与边界，STAR 故事讲两遍并优化表达。
+
+**主题：算法讲解输出 + 抗压口述**
+
+- 模拟题：Word Ladder (#127)、Course Schedule (#207)、Longest Substring Without Repeating Characters (#3)
+- 练习流程：
+ 1. 复述题意
+ 2. 分析思路
+ 3. 边写伪代码边 verbalize
+- 模拟结束后记录：卡顿点、恢复思路的方法。
+
+Course Schedule：
+不需要两个map去存关系，因为我们不关心课程的前置是谁，只关心还剩几个前置，用int[]就可以，或者map存数量，不需要记录具体课程
 
 ---
 
 ### 📅 Day 4 — 2025年11月9日（周日） — 强化日 B  
 **主题：综合实战 + 系统设计 + STAR（后半）**  
+
 | ✅ | 模块 | 内容 | 备注 | 完成日期 / 复盘总结 |
 |----|------|------|------|------------------|
 | ☐ | 模拟算法题 | Word Ladder (#127), Merge Intervals (#56), Binary Tree Right Side View (#199) | 45 分钟模拟 | |
@@ -50,26 +86,53 @@
 | ☐ | STAR 故事 | Leadership & Mentoring / Learning a New Tech / Cross-team Collaboration | 写关键句 | |
 **任务：** 模拟实战并复盘项目亮点（性能优化 + 技术深度）。
 
+**主题：动态规划 + STAR 表达**
+
+- DP 题：Coin Change (#322)、Longest Increasing Subsequence (#300)、Word Break (#139)
+- STAR 练习：Conflict / Leadership / Learning
+- 每个故事 1 分钟简述 + 1 分钟扩展。
+- 目标：讲思路像“教学”一样流畅。
+
+
 ---
 
 ### 📅 Day 3 — 2025年11月10日（周一）  
 **主题：动态规划（下） + 项目讲解演练**  
+
 | ✅ | 类型 | 题目 | 编号 | 备注 | 完成日期 / 复盘总结 |
 |----|------|------|------|------|------------------|
-| ☐ | DP 股票类 | Best Time to Buy and Sell Stock IV | #188 | | |
-| ☐ | DP 区间类 | Palindrome Partitioning II | #132 | | |
+| ☐ | DP 股票类 | Best Time to Buy and Sell Stock IV | #188 |// If k large, same as unlimited transactions. |写出了dfs的brute force， 但更优解法是dp。 用两个dp， 一个是buy[t]: max profit after buying in transaction t， 一个是sell[t]: max profit after selling in transaction t |
+| ☐ | DP 区间类 | Palindrome Partitioning II | #132 | | cut[i] = i; // 最坏情况，前 i 个都切开 |
 | ☐ | 字符串 DP | Word Break | #139 | | |
 **任务：** 梳理 DP 状态定义表，模拟 2 分钟项目讲解。
+
+**主题：快速反应 与 节奏稳定**
+
+- 选 2 道旧题计时 15 分钟/题。
+- 模拟 interviewer 插话打断后继续回答。
+- 控制语速：每句话 8 – 10 秒逻辑块。
 
 ---
 
 ### 📅 Day 2 — 2025年11月11日（周二）  
 **主题：Mock Interview + 错题复盘**  
+
 | ✅ | 内容 | 示例 | 备注 | 完成日期 / 复盘总结 |
 |----|------|------|------|------------------|
 | ☐ | 实战算法题 | Serialize and Deserialize Binary Tree (#297), Median of Two Sorted Arrays (#4) | 计时模拟 | |
 | ☐ | 行为题 | 随机抽取 2 个 STAR 故事 | 录音自测 | |
 | ☐ | 输出 | 错题笔记 + 时间分析表 | 总结易错类型 | |
+
+**主题：全流程 Mock**
+
+- 45 分钟算法 + 15 分钟行为。
+- 使用录音或摄像复盘：
+ - 思考语速
+ - 停顿长度
+ - 逻辑衔接
+- 常用衔接句：
+  > “Now that we have the approach, let’s discuss complexity.”  
+  > “An alternative could be using BFS for clarity.”
 
 ---
 
@@ -79,5 +142,14 @@
 - 复盘项目与 STAR 核心句。  
 - 检查设备、网络、白板笔。  
 - 早睡，面试当天清晨轻运动。  
+
+**主题：轻复盘 + 稳定心态**
+
+- 回顾题目分类、DP 模板、常见 bug。
+- 复述每个 STAR 故事首句。
+- 面试前 10 分钟：
+ - 深呼吸 3 次
+ - 使用固定起始语句：
+   > “Let’s break it down step by step.”
 
 ---
